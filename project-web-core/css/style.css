@@ -1,0 +1,373 @@
+html {
+    box-sizing: border-box;
+    font-family: 'TT Lakes', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Кружочки под иконки */
+
+.round {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ff3e79;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.round--pink-full {
+    background-color: #ff3e79;
+}
+
+
+/* Гамбургер */
+
+.hamburger {
+    position: relative;
+    width: 18px;
+    height: 16px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.hamburger span {
+    display: block;
+    width: 10px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;
+}
+
+.hamburger span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;
+}
+
+.hamburger span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 14px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;
+}
+
+
+/* "Читать далее" и "Показать все" */
+/* КНОПКИ ИЛИ ССЫЛКИ? */
+.more {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+    position: relative;
+}
+
+.more::before {
+    content: url("../icons/arrow-down.svg");
+    position: absolute;
+    left: -23px;
+}
+
+
+/* 320px */
+.header {
+    min-width: 320px;
+    height: 89px;
+    background-color: #fff;
+    padding: 18px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #d9fff5;
+}
+
+
+.logo {
+    height: 52px;
+}
+
+
+
+/* Скрываем блок с иконками для мобилки */
+.group-icons {
+    display: none;
+}
+
+.repair-group-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 117px;
+}
+
+.repair-group-icons::before {
+    content: '';
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+}
+
+.main {
+    background-color: #f8f8f8;
+    padding: 25px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.main__title {
+    margin-left: 16px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+}
+
+.main__title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -4px;
+    width: 8px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #41f6d7;
+}
+
+/* Скрываем иконки предназначенные для десктопа */
+.main__repair-group-icons {
+    display: none;
+}
+
+
+.navigation__list {
+    display: flex;
+    margin-top: 24px;
+    margin-left: 14px;
+    overflow: scroll;
+    list-style: none;
+    scrollbar-width: none;
+}
+
+.navigation__item {
+    display: block;
+    height: 40px;
+    margin-right: 3px;
+    padding: 8px 16px
+}
+
+.navigation__item a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #7e7e82;
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: -0.2px;
+}
+
+/* Добавляем рамку активному пункту меню */
+.navigation__item--active {
+    border: solid 2px #b8ffec;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.description {
+    padding: 26px 0;
+}
+
+
+.description__text-wrapper {
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: 0.2px;
+}
+
+.description__text {
+    height: 90px;
+    overflow: hidden;
+}
+
+.description__more {
+    margin-top: 15px;
+    margin-left: 32px;
+}
+
+.description__photo {
+    margin-top: 12px;
+    width: 100vw;
+}
+
+.description__photo img {
+    width: 100%;
+}
+
+/* 576px */
+@media (min-width: 576px) {
+
+    .header {
+        padding: 18px 24px;
+    }
+
+    .logo {
+        width: 34%;
+        position: relative;
+        display: flex;
+        align-items:center;
+    }
+
+    .logo__img {
+        display: block;
+        align-self: flex-end;
+    }
+
+    .logo::before {
+        content: '';
+        display: block;
+        margin-right: 22px;
+        width: 2px;
+        height: 32px;
+        background-color: #eaeaea;
+    }
+
+    .group-icons {
+        display: flex;
+        width: 152px;
+        justify-content: space-between;
+    }
+
+    .main__title {
+        margin-left: 24px;
+    }
+
+    .navigation__list {
+        margin-top: 32px;
+        margin-left: 22px;
+    }
+
+    .description {
+        padding: 31px 15px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .description__text-wrapper {
+        width: 45%;
+        padding: 2px 20px 2px 0;
+        line-height: 1.43;
+    }
+
+    .description__text {
+        height: 120px;
+    }
+
+    .description__more {
+        margin-top: 10px;
+        margin-left: 33px;
+    }
+
+    .description__photo {
+        margin-top: 0;
+        width: 50%;
+        padding-left: 10px;
+    }
+
+    .description__photo img {
+        width: 100%;
+        border-radius: 6px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .logo {
+        width: 49%;
+    } 
+
+    .description__text {
+        height: 160px;
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+    
+    .header {
+        display: none;
+    }
+
+    .main{
+        margin: 0 auto;
+        width: 1120px;
+        padding: 43px 9px          ;
+    }
+    
+    .repair-group-icons::before {
+        display: none;
+    }
+    .main__repair-group-icons {
+        display: flex;
+        position: absolute;
+        top: 43px;
+        right: 31px;
+        width: 372px;
+    }
+
+    .main__repair-group-icons a{
+        display: flex;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.2px;
+        color: #1b1c21;
+        align-items: center;
+    }
+
+    .main__repair-group-icons a > div {
+        margin-left: 9px;
+    }
+
+    .navigation__list {
+        margin-top: 0;
+        margin-left: 24px;
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+
+    .navigation__item {
+        margin-top: 9px;
+    }
+
+    .description {
+        padding: 0px 18px;
+    }
+
+    .description__text-wrapper {
+        width: 47%;
+        padding: 11px 10px 2px 0;
+    }
+
+}
