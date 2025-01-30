@@ -321,7 +321,7 @@ html {
 
     .main{
         margin: 0 auto;
-        width: 1120px;
+        max-width: 1120px;
         padding: 43px 9px          ;
     }
     
