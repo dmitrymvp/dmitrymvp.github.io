@@ -12,53 +12,68 @@
 <body>
     <header class="header">
         <!--гамбургер - button или div ?-->
-        <div class="round round--pink-full">
-            <div class="hamburger"><span></span></div>
-        </div>
+        <button class="round round--pink-full">
+            <div class="hamburger">
+                <span class ="hamburger__item"></span></div>
+        </button>
 
-        <div class="logo">
-            <a href="#">
-                <img src="img/logo.svg" alt="logo" class="logo__img">
-            </a>
-        </div>
 
-        <div class="group-icons">
-            <a href="#" class="round round--pink-full">
-                <img src="icons/header/call.svg" alt="Звонок">
-            </a>
-            <a href="#" class="round round--pink-full">
-                <img src="icons/header/chat.svg" alt="Чат">
-            </a>
-            <a href="#" class="round round--pink-full">
-                <img src="icons/header/profile.svg" alt="Профиль">
-            </a>
-        </div>
+        <a href="#" class="logo">
+            <img src="img/logo.svg" alt="logo" class="logo__img">
+        </a>
 
-        <div class="repair-group-icons">
-            <a href="#" class="round round--pink-full">
-                <img src="icons/header/repair.svg" alt="Оставить заявку">
-            </a>
-            <a href="#" class="round round--pink-full">
-                <img src="icons/header/сheckstatus.svg" alt="Статус ремонта">
-            </a>
-        </div>
+
+        <ul class="group-icons">
+            <li class="group-icons__item">
+                <button class="round round--pink-full">
+                    <img src="icons/header/call.svg" alt="Звонок">
+                </button>
+            </li>
+            <li class="group-icons__item">
+                <button class="round round--pink-full">
+                    <img src="icons/header/chat.svg" alt="Чат">
+                </button>
+            </li>
+            <li class="group-icons__item">
+                <button class="round round--pink-full">
+                    <img src="icons/header/profile.svg" alt="Профиль">
+                </button>
+            </li>
+        </ul>
+
+        <ul class="repair-group-icons">
+            <li class="repair-group-icons__item">
+                <button class="round round--pink-full">
+                    <img src="icons/header/repair.svg" alt="Оставить заявку">
+                </button>
+            </li>
+            <li class="repair-group-icons__item">
+                <button class="round round--pink-full">
+                    <img src="icons/header/сheckstatus.svg" alt="Статус ремонта">
+                </button>
+            </li>
+        </ul>
     </header>
     <main class="main">
 
-        <h1 class="main__title">Услуги и сервисы</h1>
+        <h2 class="main__title">Услуги и сервисы</h2>
 
-        <div class="main__repair-group-icons repair-group-icons">
-            <a href="#">Оставить заявку
-                <div class="round round--pink-full">
-                    <img src="icons/header/repair.svg" alt="Оставить заявку">
-                </div>
-            </a>
-            <a href="#">Статус ремонта
-                <div class="round round--pink-full">
-                    <img src="icons/header/сheckstatus.svg" alt="Статус ремонта">
-                </div>
-            </a>
-        </div>
+        <ul class="main__repair-group-icons repair-group-icons">
+            <li>
+                <a href="#">Оставить заявку
+                    <button class="round round--pink-full">
+                        <img src="icons/header/repair.svg" alt="Оставить заявку">
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="#">Статус ремонта
+                    <button class="round round--pink-full">
+                        <img src="icons/header/сheckstatus.svg" alt="Статус ремонта">
+                    </button>
+                </a>
+            </li>
+        </ul>
 
         <nav class="main__navigation navigation">
             <ul class="navigation__list">
@@ -92,12 +107,9 @@
                         что подтверждает большое количество постоянных клиентов. Мы гордимся тем,
                         что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
                 </div>
-                <div class="description__more more">Читать далее</div>
+                <button class="description__more more">Читать далее</button>
             </div>
-
-            <div class="description__photo">
-                <img src="img/main-photo.jpg" alt="Фото с логотипом сервиса">
-            </div>
+            <img class="description__photo" src="img/main-photo.jpg" alt="Фото с логотипом сервиса">
         </section>
     </main>
 </body>

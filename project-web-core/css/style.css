@@ -22,8 +22,12 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
-
+}
+.round:hover{
+    box-shadow: 0 0 10px #ff3e79;
+    
 }
 
 .round--pink-full {
@@ -42,7 +46,7 @@ html {
     align-items: center;
 }
 
-.hamburger span {
+.hamburger__item {
     display: block;
     width: 10px;
     height: 2px;
@@ -50,7 +54,7 @@ html {
     border-radius: 1px;
 }
 
-.hamburger span::before {
+.hamburger__item::before {
     content: '';
     position: absolute;
     top: 0;
@@ -61,7 +65,7 @@ html {
     border-radius: 1px;
 }
 
-.hamburger span::after {
+.hamburger__item::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -80,7 +84,14 @@ html {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: -0.2px;
+    border: none;
+    background-color: #f8f8f8;
     position: relative;
+    cursor: pointer;
+}
+
+.more:hover {
+    color: #ff3e79;
 }
 
 .more::before {
@@ -112,6 +123,7 @@ html {
 /* Скрываем блок с иконками для мобилки */
 .group-icons {
     display: none;
+    list-style-type: none;
 }
 
 .repair-group-icons {
@@ -119,6 +131,7 @@ html {
     justify-content: space-between;
     align-items: center;
     width: 117px;
+    list-style-type: none;
 }
 
 .repair-group-icons::before {
@@ -175,6 +188,10 @@ html {
     padding: 8px 16px
 }
 
+.navigation__item:not(.navigation__item--active) a:hover {
+    color: #ff3e79;
+}
+
 .navigation__item a {
     font-size: 16px;
     font-weight: 500;
@@ -189,6 +206,10 @@ html {
     border: solid 2px #b8ffec;
     border-radius: 6px;
     background-color: #fff;
+}
+
+.navigation__item--active a {
+    cursor: default;
 }
 
 .description {
@@ -215,13 +236,11 @@ html {
 }
 
 .description__photo {
+    display: block;
     margin-top: 12px;
     width: 100vw;
 }
 
-.description__photo img {
-    width: 100%;
-}
 
 /* 576px */
 @media (min-width: 576px) {
@@ -291,13 +310,8 @@ html {
         margin-top: 0;
         width: 50%;
         padding-left: 10px;
+        border-radius: 3%;
     }
-
-    .description__photo img {
-        width: 100%;
-        border-radius: 6px;
-    }
-
 }
 
 @media (min-width: 768px) {
@@ -336,6 +350,8 @@ html {
         width: 372px;
     }
 
+
+
     .main__repair-group-icons a{
         display: flex;
         text-decoration: none;
@@ -344,9 +360,17 @@ html {
         letter-spacing: -0.2px;
         color: #1b1c21;
         align-items: center;
+    }  
+
+    .main__repair-group-icons a:hover {
+        color: #7e7e82;
     }
 
-    .main__repair-group-icons a > div {
+    .main__repair-group-icons a:hover > .round{
+        box-shadow: 0 0 10px #ff3e79;
+    }
+
+    .main__repair-group-icons a > button {
         margin-left: 9px;
     }
 
