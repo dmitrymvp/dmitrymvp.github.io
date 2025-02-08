@@ -1,3 +1,5 @@
+@import "side-menu.css";
+
 html {
     box-sizing: border-box;
     font-family: 'TT Lakes', sans-serif;
@@ -23,12 +25,18 @@ html {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition-duration: 0.3s;
 
 }
 .round:hover{
-    box-shadow: 0 0 10px #ff3e79;
-    
+    box-shadow: 0 0 10px #ff3e79;  
 }
+
+.round:hover img{
+    transition-duration: 0.3s;
+    transform: scale(115%);
+}
+
 
 .round--pink-full {
     background-color: #ff3e79;
@@ -44,6 +52,11 @@ html {
     display: flex;
     justify-content: left;
     align-items: center;
+}
+
+.hamburger:hover {
+    transition-duration: 0.3s;
+    transform: scale(110%);
 }
 
 .hamburger__item {
@@ -118,11 +131,18 @@ html {
     height: 52px;
 }
 
+.logo:hover {
+    transition-duration: 0.3s;
+    filter: drop-shadow(0 0 2px red);
+}
+
 
 
 /* Скрываем блок с иконками для мобилки */
 .group-icons {
     display: none;
+    width: 152px;
+    justify-content: space-between;
     list-style-type: none;
 }
 
@@ -249,7 +269,7 @@ html {
         padding: 18px 24px;
     }
 
-    .logo {
+    .header__logo {
         width: 34%;
         position: relative;
         display: flex;
@@ -261,7 +281,7 @@ html {
         align-self: flex-end;
     }
 
-    .logo::before {
+    .header__logo::before {
         content: '';
         display: block;
         margin-right: 22px;
@@ -272,8 +292,6 @@ html {
 
     .group-icons {
         display: flex;
-        width: 152px;
-        justify-content: space-between;
     }
 
     .main__title {
@@ -316,7 +334,7 @@ html {
 
 @media (min-width: 768px) {
 
-    .logo {
+    .header__logo {
         width: 49%;
     } 
 
