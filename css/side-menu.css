@@ -3,7 +3,7 @@
 .side-menu {
     width: 320px;
     min-height: 100vh;
-    position: fixed;
+    position: absolute;
     background-color: #fff;
     top: 0;
     left: 0;
