@@ -1,11 +1,14 @@
 
 
-.side-menu {
+.side-menu { 
+    overflow:scroll;
+    scrollbar-width: none;
+height: 100%;
     width: 320px;
-    min-height: 100vh;
-    position: absolute;
+    position: fixed;
     background-color: #fff;
     top: 0;
+    /* bottom: 0; */
     left: 0;
     z-index: 1;
     display: flex;
@@ -60,14 +63,20 @@
     margin-left: 17px;
 }
 
-.side-menu__list {
+.side-menu__navigation {
     margin-top: 45px;
     margin-bottom: auto;
+}
+
+.side-menu__list {
+
     list-style-type: none;
     display: flex;
     flex-direction: column;
     row-gap: 24px ;
 }
+
+
 
 .side-menu__item{
     height: 32px;
@@ -115,8 +124,13 @@
     display: flex;
 }
 
-.mail {
+.side-menu__contacts {
     margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.mail {
+    font-style: normal;
     text-decoration: none;
     color:#1b1c21;
     font-size: 16px;
@@ -135,6 +149,7 @@
     text-decoration: none;
     font-weight: 700;
     letter-spacing: -0.6px;
+    font-style: normal;
 }
 
 .tel:hover {

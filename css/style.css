@@ -1,4 +1,5 @@
 @import "side-menu.css";
+@import "brands.css";
 
 html {
     box-sizing: border-box;
@@ -28,11 +29,12 @@ html {
     transition-duration: 0.3s;
 
 }
-.round:hover{
-    box-shadow: 0 0 10px #ff3e79;  
+
+.round:hover {
+    box-shadow: 0 0 10px #ff3e79;
 }
 
-.round:hover img{
+.round:hover img {
     transition-duration: 0.3s;
     transform: scale(115%);
 }
@@ -42,6 +44,24 @@ html {
     background-color: #ff3e79;
 }
 
+
+/* Заголовок секций */
+
+.title {
+    padding: 16px;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: #7e7e82;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #F8F8F8, #FFFFFF );
+
+
+
+}
 
 /* Гамбургер */
 
@@ -111,7 +131,13 @@ html {
     content: url("../icons/arrow-down.svg");
     position: absolute;
     left: -23px;
+    transition: all 0.5s;
 }
+
+.more--active::before {
+    rotate: -180deg;
+}
+
 
 
 /* 320px */
@@ -273,7 +299,7 @@ html {
         width: 34%;
         position: relative;
         display: flex;
-        align-items:center;
+        align-items: center;
     }
 
     .logo__img {
@@ -336,30 +362,41 @@ html {
 
     .header__logo {
         width: 49%;
-    } 
+    }
 
     .description__text {
         height: 160px;
     }
+    
+    .title {
+        padding: 16px 24px;
+    }
 
+    .more {
+        letter-spacing: 0.2px;
+    }
 }
 
-
 @media (min-width: 1024px) {
-    
+
+    .title {
+        padding: 16px 32px;
+    }
+
     .header {
         display: none;
     }
 
-    .main{
+    .main {
         margin: 0 auto;
         max-width: 1120px;
-        padding: 43px 9px          ;
+        padding: 43px 9px;
     }
-    
+
     .repair-group-icons::before {
         display: none;
     }
+
     .main__repair-group-icons {
         display: flex;
         position: absolute;
@@ -370,7 +407,7 @@ html {
 
 
 
-    .main__repair-group-icons a{
+    .main__repair-group-icons a {
         display: flex;
         text-decoration: none;
         font-size: 16px;
@@ -378,17 +415,17 @@ html {
         letter-spacing: -0.2px;
         color: #1b1c21;
         align-items: center;
-    }  
+    }
 
     .main__repair-group-icons a:hover {
         color: #7e7e82;
     }
 
-    .main__repair-group-icons a:hover > .round{
+    .main__repair-group-icons a:hover>.round {
         box-shadow: 0 0 10px #ff3e79;
     }
 
-    .main__repair-group-icons a > button {
+    .main__repair-group-icons a>button {
         margin-left: 9px;
     }
 

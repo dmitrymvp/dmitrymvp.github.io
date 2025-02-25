@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сервисный центр CPS </title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-      <!-- <header class="header">
-        
+    <!-- <header class="header">
+
         <button class="round round--pink-full">
             <div class="hamburger">
-                <span class ="hamburger__item"></span></div>
+                <span class="hamburger__item"></span>
+            </div>
         </button>
 
 
@@ -111,9 +113,9 @@
             </div>
             <img class="description__photo" src="img/main-photo.jpg" alt="Фото с логотипом сервиса">
         </section>
-    </main> -->
+    </main>
 
-    <nav class="side-menu">
+    <aside class="side-menu">
         <header class="side-menu__header">
             <button class="round round--pink-full">
                 <div class="close"></div>
@@ -126,16 +128,18 @@
             </button>
         </header>
 
-        <ul class="side-menu__list">
-            <li class="side-menu__item side-menu__item--active"><a href="">Ремонт техники</a></li>
-            <li class="side-menu__item"><a href="#">Услуги и сервисы</a></li>
-            <li class="side-menu__item"><a href="#">Корпоративным клиентам</a></li>
-            <li class="side-menu__item"><a href="#">Продавцам техники</a></li>
-            <li class="side-menu__item"><a href="#">Партнерам</a></li>
-            <li class="side-menu__item"><a href="#">Производителям</a></li>
-            <li class="side-menu__item"><a href="#">Наши сервисные центры</a></li>
-            <li class="side-menu__item"><a href="#">Контакты</a></li>
-        </ul>
+        <nav class="side-menu__navigation">
+            <ul class="side-menu__list">
+                <li class="side-menu__item side-menu__item--active"><a href="">Ремонт техники</a></li>
+                <li class="side-menu__item"><a href="#">Услуги и сервисы</a></li>
+                <li class="side-menu__item"><a href="#">Корпоративным клиентам</a></li>
+                <li class="side-menu__item"><a href="#">Продавцам техники</a></li>
+                <li class="side-menu__item"><a href="#">Партнерам</a></li>
+                <li class="side-menu__item"><a href="#">Производителям</a></li>
+                <li class="side-menu__item"><a href="#">Наши сервисные центры</a></li>
+                <li class="side-menu__item"><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
 
         <footer class="side-menu__footer">
             <ul class="group-icons">
@@ -156,10 +160,11 @@
                 </li>
             </ul>
 
-            <a href="mailto:mail@cps.com" class="mail">mail@cps.com</a>
+            <address class="side-menu__contacts">
+                <a href="mailto:mail@cps.com" class="mail">mail@cps.com</a>
+                <a href="tel:+78008908900" class="tel">8 800 890 8900</a>
+            </address>
             
-            <a href="tel:+78008908900" class="tel">8 800 890 8900</a>
-
             <ul class="lang-switcher">
                 <li>
                     <button class="lang-switcher__item lang-switcher__item--active" id="RU">RU</button>
@@ -171,8 +176,66 @@
                     <button class="lang-switcher__item" id="CH">CH</button>
                 </li>
             </ul>
+
         </footer>
-    </nav>
+    </aside> -->
+
+    <section class="brands">
+        <h3 class="title">ремонт техники различных брендов</h3>
+        <div class="container swiper">     
+            <ul class="brands__list swiper-wrapper">
+                    <li class="brands__item swiper-slide">
+                        <img src="icons/brands/lenovo.svg" alt="">
+                        <div class="round"><img src="icons/dropdown.svg" alt=""></div>
+                    </li>
+                    <li class="brands__item swiper-slide">
+                        <img src="icons/brands/samsung.svg" alt="">
+                        <div class="round"><img src="icons/dropdown.svg" alt=""></div>
+                    </li>
+                    <li class="brands__item swiper-slide">
+                        <img src="icons/brands/apple.svg" alt="">
+                        <div class="round"><img src="icons/dropdown.svg" alt=""></div>
+                    </li>
+                    <li class="brands__item swiper-slide">
+                        <img src="icons/brands/bosh.svg" alt="">
+                        <div class="round"><img src="icons/dropdown.svg" alt=""></div>
+                    </li>
+                    <li class="brands__item swiper-slide">
+                        <img src="icons/brands/hp.svg" alt="">
+                        <div class="round"><img src="icons/dropdown.svg" alt=""></div>
+                    </li>
+                    <li class="brands__item swiper-slide">
+                        <img src="icons/brands/acer.svg" alt="">
+                        <div class="round"><img src="icons/dropdown.svg" alt=""></div>
+                    </li>
+                    <li class="brands__item swiper-slide">
+                        <img src="icons/brands/viewsonic.svg" alt="">
+                        <div class="round"><img src="icons/dropdown.svg" alt=""></div>
+                    </li>
+                    <li class="brands__item swiper-slide">
+                        <img src="icons/brands/sony.svg" alt="">
+                        <div class="round"><img src="icons/dropdown.svg" alt=""></div>
+                    </li>
+                    <li class="brands__item swiper-slide">
+                        <img src="icons/brands/acer.svg" alt="">
+                        <div class="round"><img src="icons/dropdown.svg" alt=""></div>
+                    </li>
+                    <li class="brands__item swiper-slide">
+                        <img src="icons/brands/acer.svg" alt="">
+                        <div class="round"><img src="icons/dropdown.svg" alt=""></div>
+                    </li>
+                    <li class="brands__item swiper-slide">
+                        <img src="icons/brands/acer.svg" alt="">
+                        <div class="round"><img src="icons/dropdown.svg" alt=""></div>
+                    </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+        </div>
+        <button class="brands__more more" id="brands__more">Показать все</button>
+
+    </section>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
