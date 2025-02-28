@@ -1,7 +1,8 @@
 
 let swiper = null;
 
-window.addEventListener('resize', function () {
+function addSwiper() {
+    
     const currentInnerWidth = window.innerWidth;
 
     if (currentInnerWidth < 768) {
@@ -37,7 +38,10 @@ window.addEventListener('resize', function () {
             swiper = null;
         }
     }
-});
+}
+
+window.addEventListener('resize', addSwiper);
+window.addEventListener('load', addSwiper);
 
 let brandsMoreElement = document.querySelector('#brands__more');
 let containerElement = document.querySelector('.container');
